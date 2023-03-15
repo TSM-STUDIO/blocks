@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.page__accordion{
+    width: 75%;
+    margin: 100px auto;
+}
+body{
+    background-color: #F1F1F1;
+    
+}

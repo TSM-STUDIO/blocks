@@ -1,0 +1,77 @@
+/* reset default styles */
+.accordion__list{
+    list-style-type: none;
+
+    margin: 0;
+    padding: 0;
+}
+.accordion__control, .accordion__icon{
+    background-color: none;
+    cursor: pointer;
+    border: none;    
+    text-align: inherit;
+    padding: 0;
+}
+
+/* accordion styles */
+.accordion__control{
+    display: flex;
+    justify-content: space-between; 
+
+    background-color: white;
+
+    padding: 20px 30px;
+    margin-bottom: 2px;
+
+    width: 100%;
+
+    /* Свойства изменение которых необходимо отслеживать */
+  transition-property: width;
+
+  /* Устанавливаем "незаметную для глаза" длительность перехода */
+  transition-duration: 1ms;
+}
+.accordion__title{
+    color: #434343;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+}
+.accordion__icon{
+    display: flex;
+    align-items: center;
+
+    width: 15px;
+    height: 20px;
+
+    transform: rotate(180deg);
+    transition: 0.4s ease;
+
+    user-select: none;
+}
+.accordion__content{
+    box-sizing: content-box;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    background-color: white;
+
+    padding: 0 30px;
+
+    transition-property: max-height, opacity, padding-top, padding-bottom;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+.open.accordion__icon{
+    transition: 0.4s ease;
+    transform: rotate(0deg);
+}
+.open.accordion__content{
+    opacity: 1;
+
+    margin-bottom: 2px;
+    padding: 20px 30px;
+}
